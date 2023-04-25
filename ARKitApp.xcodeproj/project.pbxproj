@@ -11,6 +11,10 @@
 		D0B5359529F7B16000C33539 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5359429F7B16000C33539 /* ContentView.swift */; };
 		D0B5359729F7B16300C33539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B5359629F7B16300C33539 /* Assets.xcassets */; };
 		D0B5359A29F7B16300C33539 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B5359929F7B16300C33539 /* Preview Assets.xcassets */; };
+		D0B535A329F7B3CA00C33539 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B535A229F7B3CA00C33539 /* CustomARView.swift */; };
+		D0B535A529F7B5B700C33539 /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B535A429F7B5B700C33539 /* CustomARViewRepresentable.swift */; };
+		D0B535A729F812D300C33539 /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B535A629F812D300C33539 /* ARAction.swift */; };
+		D0B535AA29F8138E00C33539 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B535A929F8138E00C33539 /* ARManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		D0B5359429F7B16000C33539 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D0B5359629F7B16300C33539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B5359929F7B16300C33539 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D0B535A229F7B3CA00C33539 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		D0B535A429F7B5B700C33539 /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
+		D0B535A629F812D300C33539 /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
+		D0B535A929F8138E00C33539 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,8 @@
 		D0B5359129F7B16000C33539 /* ARKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0B535A129F7B37500C33539 /* Features */,
 				D0B5359229F7B16000C33539 /* ARKitAppApp.swift */,
-				D0B5359429F7B16000C33539 /* ContentView.swift */,
 				D0B5359629F7B16300C33539 /* Assets.xcassets */,
 				D0B5359829F7B16300C33539 /* Preview Content */,
 			);
@@ -65,6 +73,18 @@
 				D0B5359929F7B16300C33539 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0B535A129F7B37500C33539 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D0B535A629F812D300C33539 /* ARAction.swift */,
+				D0B5359429F7B16000C33539 /* ContentView.swift */,
+				D0B535A229F7B3CA00C33539 /* CustomARView.swift */,
+				D0B535A429F7B5B700C33539 /* CustomARViewRepresentable.swift */,
+				D0B535A929F8138E00C33539 /* ARManager.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B5359529F7B16000C33539 /* ContentView.swift in Sources */,
+				D0B535A729F812D300C33539 /* ARAction.swift in Sources */,
+				D0B535A329F7B3CA00C33539 /* CustomARView.swift in Sources */,
 				D0B5359329F7B16000C33539 /* ARKitAppApp.swift in Sources */,
+				D0B535AA29F8138E00C33539 /* ARManager.swift in Sources */,
+				D0B535A529F7B5B700C33539 /* CustomARViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +294,13 @@
 				DEVELOPMENT_TEAM = 655K34WV58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Needed for ARView";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +325,13 @@
 				DEVELOPMENT_TEAM = 655K34WV58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera Needed for ARView";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
